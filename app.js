@@ -26,8 +26,8 @@ const server = http.createServer((req, res) => {
       console.log(chunk);
       body.push(chunk);
     });
-    req.on("end", () => {
-
+    /// return will fixed the non blocking code
+    return req.on("end", () => {
       /// call back
       const parsedBody = Buffer.concat(body).toString();
       const message = parsedBody.split("=")[1];
