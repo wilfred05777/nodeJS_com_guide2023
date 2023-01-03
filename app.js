@@ -31,14 +31,18 @@ const server = http.createServer((req, res) => {
       /// call back
       const parsedBody = Buffer.concat(body).toString();
       const message = parsedBody.split("=")[1];
-      fs.writeFileSync("message.txt", message);
+      //                           callback (err)
+      fs.writeFile("message.txt", message, (err) => {
+        /// writeFileSync - it will block next code until such it executed first
+        // fs.writeFileSync("message.txt", message);
 
-      console.log(parsedBody);
-      // fs.writeFile("message.txt", "DUMMY");
-      // fs.writeFileSync("message.txt", "DUMMY");
-      res.statusCode = 302;
-      res.setHeader("Location", "/");
-      return res.end();
+        console.log(parsedBody);
+        // fs.writeFile("message.txt", "DUMMY");
+        // fs.writeFileSync("message.txt", "DUMMY");
+        res.statusCode = 302;
+        res.setHeader("Location", "/");
+        return res.end();
+      }); // it is better to used writeFile
     });
   }
 
