@@ -5,9 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node app.js",
-    "start-server": "node app.js"
-
+    "start": "nodemon app.js",
+    "start-server": "node app.js",
+    "dev": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/wilfred05777/nodeJS_com_guide2023/issues"
   },
-  "homepage": "https://github.com/wilfred05777/nodeJS_com_guide2023#readme"
+  "homepage": "https://github.com/wilfred05777/nodeJS_com_guide2023#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
