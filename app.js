@@ -14,8 +14,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(listRoutes);
 app.use(profileRoutes);
 app.use(adminRoutes);
-/// the order matters here
 app.use(shopRoutes); /// default routes
-/// default route must be on the bottom
+
+/// 67. Adding a 404 Error Page
+app.use((req, res, next) => {
+  res.status(404).send(`
+    <h1>Page not found!</h1>
+  `);
+});
 
 app.listen(3000);
