@@ -7,11 +7,13 @@ const app = express();
 const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 const profileRoutes = require("./routes/profile");
+const listviewRoutes = require("./routes/listview");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(adminRoutes);
+app.use(listviewRoutes);
 app.use(profileRoutes);
+app.use(adminRoutes);
 /// the order matters here
 app.use(shopRoutes); /// default routes
 /// default route must be on the bottom
