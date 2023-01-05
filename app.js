@@ -7,11 +7,11 @@ const app = express();
 const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 const profileRoutes = require("./routes/profile");
-const listviewRoutes = require("./routes/listview");
+const listRoutes = require("./routes/listview");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(listviewRoutes);
+app.use(listRoutes);
 app.use(profileRoutes);
 app.use(adminRoutes);
 /// the order matters here
