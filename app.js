@@ -13,10 +13,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(listRoutes);
 app.use(profileRoutes);
-app.use(adminRoutes);
+// 68. Filtering Paths
+app.use("/admin", adminRoutes);
 app.use(shopRoutes); /// default routes
 
-/// 67. Adding a 404 Error Page
 app.use((req, res, next) => {
   res.status(404).send(`
     <h1>Page not found!</h1>
