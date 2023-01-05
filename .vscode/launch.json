@@ -6,7 +6,7 @@
 
 
   // 3:12mins @ 52. Restarting the Debugger Automatically After Editing our App 
-  
+
   "version": "0.2.0",
   "configurations": [
     {
@@ -21,6 +21,7 @@
       "name": "Launch Program",
       "restart": true,
       "runtimeExecutable": "nodemon",
+      "console": "integratedTerminal",
       "skipFiles": [
         "<node_internals>/**"
       ],
