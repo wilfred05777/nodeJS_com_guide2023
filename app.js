@@ -11,6 +11,7 @@ const profileRoutes = require("./routes/profile");
 const listRoutes = require("./routes/listview");
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(listRoutes);
 app.use(profileRoutes);

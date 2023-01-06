@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: sans-serif;
+}
+
+main {
+  padding: 1rem;
+}
+
+.main-header {
+  width: 100%;
+  height: 3.5rem;
+  background-color: #dbc441;
+  padding: 0 1.5rem;
+}
+
+.main-header__nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main-header__item-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-header__item {
+  margin: 0 1rem;
+  padding: 0;
+}
+
+.main-header__item a {
+  text-decoration: none;
+  color: #000;
+}
+
+.main-header__item a:hover,
+.main-header__item a:active,
+.main-header__item a.active {
+  color: #ce37ed;
+}
+
+.product-form {
+  display: block;
+  width: 20rem;
+  max-width: 90%;
+  margin: auto;
+}
+
+.form-control {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.form-control label,
+.form-control input {
+  display: block;
+  width: 100%;
+}
+
+.form-control input {
+  border: 1px solid #dbc441;
+  font: inherit;
+  border-radius: 2px;
+}
+
+button {
+  font: inherit;
+  border: 1px solid #ce37ed;
+  color: #ce37ed;
+  background: #fff;
+  cursor: pointer;
+}
+
+button:hover,
+button:active {
+  background-color: #ce37ed;
+  color: #fff;
+}
