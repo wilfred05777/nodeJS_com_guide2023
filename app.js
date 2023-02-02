@@ -1,11 +1,18 @@
 const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
+// const Handlebars = require('handlebars')
+// const { engine } = require('express-handlebars')
+const hbs = require('handlebars')
 
 const app = express()
 
+app.engine('hbs', engine())
+
+app.set('view engine', 'hbs')
+
 /// set template engine to pug
-app.set('view engine', 'pug')
+// app.set('view engine', 'pug')
 /// telling express we are compiling a template engine
 app.set('views', 'views')
 
