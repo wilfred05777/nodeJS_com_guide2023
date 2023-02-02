@@ -1,23 +1,26 @@
 const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
-// const Handlebars = require('handlebars')
+const expressHbs = require('express-handlebars')
+
 // const { engine } = require('express-handlebars')
-const hbs = require('handlebars')
 
 const app = express()
 
-app.engine('hbs', engine())
+app.engine('handlebars', expressHbs.engine())
 
-app.set('view engine', 'hbs')
+// https://stackoverflow.com/questions/69959820/typeerror-exphbs-is-not-a-function reading docs
+app.set('view engine', 'pug')
 
-/// set template engine to pug
-// app.set('view engine', 'pug')
-/// telling express we are compiling a template engine
+// app.set('view engine', 'handlebars')
+
 app.set('views', 'views')
+
+// app.set('views', 'views')
 
 /// import Routes
 // const adminRoutes = require("./routes/admin");
+
 const adminData = require('./routes/admin')
 const shopRoutes = require('./routes/shop')
 const profileRoutes = require('./routes/profile')
