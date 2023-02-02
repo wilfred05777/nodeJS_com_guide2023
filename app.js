@@ -1,16 +1,17 @@
 const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
-const expressHbs = require('express-handlebars')
-
+// const expressHbs = require('express-handlebars')
+// const ejs = require('ejs')
 // const { engine } = require('express-handlebars')
 
 const app = express()
 
-app.engine('handlebars', expressHbs.engine())
+// app.engine('handlebars', expressHbs.engine())
 
 // https://stackoverflow.com/questions/69959820/typeerror-exphbs-is-not-a-function reading docs
-app.set('view engine', 'pug')
+// app.set('view engine', 'pug')
+app.set('view engine', 'ejs')
 
 // app.set('view engine', 'handlebars')
 
